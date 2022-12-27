@@ -6,14 +6,14 @@ import (
 
 func TestHello(t *testing.T) {
 	t.Run("when valid name", func(t *testing.T) {
-			got := Hello("Joe")
+			got := Hello("en", "Joe")
 			want := "Hello, Joe"
 
 			assertEqual(t, got, want)
 	})
 	t.Run("when empty string", func(t *testing.T) {
-			got := Hello("")
-			want := "Hello, World"
+			got := Hello("es", "Mary")
+			want := "Hola, Mary"
 
 			assertEqual(t, got, want)
 	})
